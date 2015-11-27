@@ -1,6 +1,6 @@
 name    'ckhall-remi'
 version '0.0.2'
-dependency 'stahnma/epel', '0.0.3'
+dependency 'stahnma/epel', 'x.x.x'
 source 'http://github.com/ckhall/puppet-module-remi'
 author 'ckhall'
 license 'Apache License, Version 2.0'
