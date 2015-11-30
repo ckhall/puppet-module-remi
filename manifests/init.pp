@@ -20,7 +20,7 @@ class remi {
   if $::osfamily == 'RedHat' and $::operatingsystem != 'Fedora' {
 
     yumrepo { 'remi':
-      descr          => "Les RPM de remi pour Enterprise Linux ${::is_maj_version} - ${::architecture}",
+      descr          => "Les RPM de remi pour Enterprise Linux ${::os_maj_version} - ${::architecture}",
       mirrorlist     => "http://rpms.famillecollet.com/enterprise/${::os_maj_version}/remi/mirror",
       enabled        => '1',
       gpgcheck       => '1',
@@ -29,7 +29,7 @@ class remi {
 
     yumrepo { 'remi-test':
       descr          => "Les RPM de remi pour Enterprise Linux 6 - ${::architecture}",
-      mirrorlist     => "http://rpms.famillecollet.com/enterprise/${::os_major_version}/test/mirror",
+      mirrorlist     => "http://rpms.famillecollet.com/enterprise/${::os_maj_version}/test/mirror",
       enabled        => '0',
       gpgcheck       => '1',
       gpgkey         => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi",
